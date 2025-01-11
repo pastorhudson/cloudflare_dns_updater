@@ -1,0 +1,10 @@
+[cloudflare]
+api_token = your_api_token_here
+zone_id = your_zone_id_here
+domain_name = your.domain.com
+record_type = A
+proxied = true
+
+[settings]
+log_file = cloudflare_ddns.log
+log_level = INFO
