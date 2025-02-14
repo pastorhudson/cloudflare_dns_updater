@@ -1,10 +1,24 @@
+[settings]
+log_level = DEBUG  # Changed to DEBUG to see more details
+log_file = cloudflare_ddns.log
+
 [cloudflare]
-api_token = your_api_token_here
+api_token = your_actual_api_token_here
+
+[domain:domain1] #just a name so you know
+domain_name = somedomain.com
 zone_id = your_zone_id_here
-domain_name = your.domain.com
 record_type = A
 proxied = true
 
-[settings]
-log_file = cloudflare_ddns.log
-log_level = INFO
+[domain:domain2]
+domain_name = sub1.somedomain2.com
+zone_id = your_zone_id_here
+record_type = A
+proxied = true
+
+[domain:domain3]
+domain_name = sub2.somedomain2.com
+zone_id = different_zone_id_here
+record_type = A
+proxied = true
